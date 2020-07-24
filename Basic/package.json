@@ -1,5 +1,5 @@
 {
-  "name": "static-site",
+  "name": "mini-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "badmath": "^1.0.1",
     "inquirer": "^6.5.2"
   }
 }
