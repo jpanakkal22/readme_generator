@@ -1,18 +1,20 @@
 const inquirer = require("inquirer");
+const fs = require("fs");
 
 // array of questions for user
-const questions = [{
-    title: "What is the title of your project?",
-    description: "Enter a description of your project",
-    installation: "Enter any installation instructions",
-    usage: "Enter usage information",
-    contribution: "Enter contribution guidelines",
-    test: "Enter test instructions"
-}];
+// const questions = [{
+//     title: "What is the title of your project?",
+//     description: "Enter a description of your project",
+//     installation: "Enter any installation instructions",
+//     usage: "Enter usage information",
+//     contribution: "Enter contribution guidelines",
+//     test: "Enter test instructions"
+// }];
 
 // function to write README file
-function writeToFile(fileName, data) {
-}
+// function writeToFile(fileName, data) {
+//     fs.writeFile("README.md", response)
+// }
 
 // function to initialize program
 function init() {
@@ -51,11 +53,51 @@ function init() {
         }
     ])
     .then(function(response) {
-
-        console.log(JSON.stringify(response));
+        fs.writeFile("README.md", `# ${response.title}`, function(err){
+            if(err) {
+                console.log(err)            }
+        }) 
+        fs.appendFile("README.md", "\n\n" + "## Description", function(err){
+            if(err) {
+                console.log(err)            }
+        })
+        fs.appendFile("README.md", "\n\n" + response.description, function(err){
+            if(err) {
+                console.log(err)            }
+        })   
+        fs.appendFile("README.md", "\n\n" + "## Installation Instructions", function(err){
+            if(err) {
+                console.log(err)            }
+        })
+        fs.appendFile("README.md", "\n\n" + response.installation, function(err){
+            if(err) {
+                console.log(err)            }
+        })  
+        fs.appendFile("README.md", "\n\n" + "## Usage", function(err){
+            if(err) {
+                console.log(err)            }
+        })
+        fs.appendFile("README.md", "\n\n" + response.usage, function(err){
+            if(err) {
+                console.log(err)            }
+        })             
+        fs.appendFile("README.md", "\n\n" + "## Contribution Guidelines", function(err){
+            if(err) {
+                console.log(err)            }
+        })
+        fs.appendFile("README.md", "\n\n" + response.contribution, function(err){
+            if(err) {
+                console.log(err)            }
+        })             
+        fs.appendFile("README.md", "\n\n" + "## Test Instructions", function(err){
+            if(err) {
+                console.log(err)            }
+        })
+        fs.appendFile("README.md", "\n\n" + response.test, function(err){
+            if(err) {
+                console.log(err)            }
+        })                        
     });
-
-
 }
 
 // function call to initialize program
