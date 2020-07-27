@@ -1,10 +1,22 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const axios = require("axios");
+const queryUrl = `https://api.github.com/licenses`;
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-function promptUser() {
+
+
+async function promptUser() {
+  
+
+  let response = await axios.get(queryUrl) 
+    // console.log(response.data);
+
+    let licenses = response.data.map(license => license.name)
+    console.log(licenses)
+
   return inquirer.prompt([
     {
       type: "input",
@@ -36,14 +48,24 @@ function promptUser() {
       message: "Enter test instructions",
       name: "test"  
 
+      },
+      {
+        type: "list",
+        message: "Choose a license",
+        choices: licenses,
+        name: "licenses"
+      },
+      {
+        type: "input",
+        message: "For questions, please enter your GitHub username",
+        name: "github_username"
       }
   ]);
 }
 
 function generateREADME(answers) {
 
-return
-`# ${answers.title}
+return`# ${answers.title}
 
 ## Description
 ${answers.description}
@@ -68,7 +90,7 @@ ${answers.usage}
 
 
 ## License
-
+${answers.licenses}
 
 ## Badges
 
@@ -82,6 +104,10 @@ ${answers.contribution}
 
 ## Tests
 ${answers.test}
+
+## Questions?
+[${answers.github_username}](https://github.com/${answers.github_username})
+
 `
 ;
 }
@@ -98,3 +124,5 @@ promptUser()
   .catch(function(err) {
     console.log(err);
   });
+
+  
