@@ -1,42 +1,38 @@
-# sadf
+# README Generator
 
 ## Description
-sadf
+This project uses Node.js to generate a professional README.md file using the answers from CLI prompts. 
 
-## Table of Contents (Optional)
+## Table of Contents
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Credits](#credits)
 * [License](#license)
-
+* [Badges](#badges)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
 ## Installation
-asfd
-
+Npm inquirer, fs, util and axios need to be installed prior to running application.
 
 ## Usage
-sadf
-
-
-## Credits
-
+Utilize Node.js to generate a README.md file by answering some questions.
 
 ## License
-GNU Affero General Public License v3.0
+Apache License 2.0
 
 ## Badges
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Contributing 
-asf
-
+Feel free to contact me using the information in the Questions section.
 
 ## Tests
-sdfa
+None
 
 ## Questions?
-[sadf](https://github.com/sadf)
+[jpanakkal22](https://github.com/jpanakkal22)
 
-You can also contact me at sadf
+You can also contact me at josh_panakkal3122@hotmail.com
 

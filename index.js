@@ -43,32 +43,22 @@ async function promptUser() {
       type: "input",
       message: "Enter test instructions",
       name: "test"  
-
       },
       {
-        type: "list",
-        message: "Choose a license",
-        choices: licenses,
-        name: "licenses"
+      type: "list",
+      message: "Choose a license",
+      choices: licenses,
+      name: "licenses"
       },
       {
-        type: "input",
-        message: "For questions, please enter your GitHub username",
-        name: "github_username"
-      },
-      {
-        type: "input",
-        message: "Enter your email address",
-        name: "email"
-      },
-      {
-        type: 'list',
-        message: "Choose a badge",
-        name: 'badge',
-        choices: [
+      type: 'list',
+      message: "Choose a badge",
+      name: 'badge',
+      choices:
+       [
           {
-            name: 'GNU Affero General Public License v3.0',
-            value: '[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)'
+          name: 'GNU Affero General Public License v3.0',
+          value: '[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)'
           },
           {
           name: 'Apache License 2.0',
@@ -119,8 +109,17 @@ async function promptUser() {
           value: '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
           }
         ],
-        
-      }
+      },
+      {
+        type: "input",
+        message: "For questions, please enter your GitHub username",
+        name: "github_username"
+      },
+      {
+        type: "input",
+        message: "Enter your email address",
+        name: "email"
+      },
   ]);
 }
 
@@ -135,7 +134,6 @@ ${answers.description}
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Credits](#credits)
 * [License](#license)
 * [Badges](#badges)
 * [Contributing](#contributing)
@@ -147,8 +145,6 @@ ${answers.installation}
 
 ## Usage
 ${answers.usage}
-
-## Credits
 
 ## License
 ${answers.licenses}
@@ -173,7 +169,7 @@ You can also contact me at ${answers.email}
 
 promptUser()
   .then(function(answers) {
-    console.log(answers.badge[0])
+    
     const readme = generateREADME(answers);
 
     return writeFileAsync("README.md", readme);
