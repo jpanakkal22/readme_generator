@@ -126,6 +126,7 @@ async function promptUser() {
 function generateREADME(answers) {
 
 return`# ${answers.title}
+${answers.badge}
 
 ## Description
 ${answers.description}

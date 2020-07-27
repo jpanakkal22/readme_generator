@@ -1,4 +1,5 @@
 # README Generator
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
 ## Description
 This project uses Node.js to generate a professional README.md file using the answers from CLI prompts. 
@@ -20,10 +21,10 @@ Npm inquirer, fs, util and axios need to be installed prior to running applicati
 Utilize Node.js to generate a README.md file by answering some questions.
 
 ## License
-Apache License 2.0
+Mozilla Public License 2.0
 
 ## Badges
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
 ## Contributing 
 Feel free to contact me using the information in the Questions section.
