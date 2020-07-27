@@ -1,7 +1,7 @@
-# readme generator
+# sadf
 
 ## Description
-something
+sadf
 
 ## Table of Contents (Optional)
 
@@ -12,32 +12,31 @@ something
 
 
 ## Installation
-none
+asfd
 
 
 ## Usage
-something else
+sadf
 
 
 ## Credits
 
 
 ## License
-Apache License 2.0
+GNU Affero General Public License v3.0
 
 ## Badges
-
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
 ## Contributing 
-me
+asf
 
 
 ## Tests
-test
+sdfa
 
 ## Questions?
-[jpanakkal22](https://github.com/jpanakkal22)
+[sadf](https://github.com/sadf)
+
+You can also contact me at sadf
 
